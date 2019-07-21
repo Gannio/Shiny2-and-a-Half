@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IniLibrary", "IniLibrary\IniLibrary.csproj", "{69A4F56E-BFA1-4CF8-9B21-9EF787FDD457}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IniLibrarySample", "IniLibrarySample\IniLibrarySample.csproj", "{58689870-0070-41E2-BD43-C144D4680EC0}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs08.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = IniLibrary\\IniLibrary.csproj
+		SccProjectName1 = IniLibrary
+		SccLocalPath1 = IniLibrary
+		SccProjectUniqueName2 = IniLibrarySample\\IniLibrarySample.csproj
+		SccProjectName2 = IniLibrarySample
+		SccLocalPath2 = IniLibrarySample
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69A4F56E-BFA1-4CF8-9B21-9EF787FDD457}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69A4F56E-BFA1-4CF8-9B21-9EF787FDD457}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69A4F56E-BFA1-4CF8-9B21-9EF787FDD457}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69A4F56E-BFA1-4CF8-9B21-9EF787FDD457}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58689870-0070-41E2-BD43-C144D4680EC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58689870-0070-41E2-BD43-C144D4680EC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58689870-0070-41E2-BD43-C144D4680EC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58689870-0070-41E2-BD43-C144D4680EC0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

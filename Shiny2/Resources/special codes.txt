@@ -1,0 +1,15 @@
+Macros:
+
+$hg$ - Display the number of sent gen IV pokemon
+$bw$ - Display the number of sent gen V pokemon
+$mode$ - Display the current mode [distribution/receiving]
+$stime$ - Display the current system time [short]
+$ltime$ - Display the current system time [long]
+$sdate$ - Display the current system date [short]
+$ldate$ - Display the current system date [long]
+
+$cgen4$ - current gen 4 file pokemon [only applicable in file mode]
+$cgen5$ - current gen 5 file pokemon [only applicable in file mode]
+
+$fgen4$ - prints a table of gen 4 file pokemon [only applicable in folder mode]
+$fgen5$ - prints a table of gen 5 file pokemon [only applicable in folder mode]

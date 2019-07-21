@@ -1,0 +1,117 @@
+<html>
+
+<head>
+	<title>Shiny² GTS System</title>
+	
+    <style type = "text/css">
+        #tbl
+        {
+            border: 2px;
+            border-color: #6E7788;
+            background-color: #A0A9BA;
+            width: 100%;
+            padding: 3px;
+            border-spacing: 3px;
+            border-radius: 5px;
+        }
+        #tb
+        {
+            text-align: center;
+        }
+		body
+		{
+			background: #646D7E;
+			color: #FFF;
+			text-align: center;
+			font-family:"Palatino Linotype","Times New Roman";
+		}
+		h3
+		{
+			background: #8C95A6;
+			border-radius: 10px;
+			width: 30%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#head
+		{
+			background: #969FB0;
+			padding: 3px;
+			margin: 3px;
+			width: auto;
+			border-radius: 10px;
+			text-align: center;
+			font-size: 22px;
+		}
+		#footer
+		{
+			background: #969FB0;
+			padding: 3px;
+			margin: 3px;
+			width: auto;
+			border-radius: 10px;
+			text-align: center;
+			font-size: 16px;
+		}
+		#content
+		{
+			padding: 5px;
+			margin: auto;
+			width: 75%;
+			height: auto;
+			text-align: center;
+			background: #C8D1E2;
+			border-radius: 5px;
+		}
+		table
+		{
+			border-radius: 10px;
+		}
+    </style>
+	
+</head>
+
+<body>
+	<div id = "content" align = "center">
+		<div id = "head">Shiny² Global Trade System Emulator</div>
+		
+	    <h3>Current Statistics as of: <br />$ltime$ on $ldate$</h3>
+		
+		<table id = "tbl">
+			<tr>				
+				<th onmouseover="style.backgroundColor='#C8D1E2'" onmouseout="style.backgroundColor='#A0A9BA'">Generation IV Count</th>
+				<th onmouseover="style.backgroundColor='#C8D1E2'" onmouseout="style.backgroundColor='#A0A9BA'">Generation V Count</th>
+			</tr>
+			<tr>
+				<td id = "tb" onmouseover="style.backgroundColor='#C8D1E2'" onmouseout="style.backgroundColor='#A0A9BA'">$hg$ Pokémon sent</td>
+				<td id = "tb" onmouseover="style.backgroundColor='#C8D1E2'" onmouseout="style.backgroundColor='#A0A9BA'">$bw$ Pokémon sent</td>
+			</tr>
+		</table>
+		<br />
+		<br />
+		<div id = "footer">This is the default page for Shiny². The host can configure what is displayed here inside the program by modifying the "BrowserMessage" tab.<br />
+		Here are some basic tips for using Shiny²'s HTML output:
+		<ul align = "left">
+			<li>I recommend remotely linking to your images rather than using the Base64 embed option. That can really bulk up your page.</li>
+			<li>You have to do everything inline or embedded. You -can- technically link all your code from another website if you want.</li>
+		</ul>
+		Here are the currently supported macros of Shiny². Please note, this list can grow or shrink over time:
+		<ul align = "left">
+			<li>&#36;hg&#36; - This will display how many Generation IV Pokémon have been sent.</li>
+			<li>&#36;bw&#36; - This will display how many Generation V Pokémon have been sent.</li>
+			<li>&#36;mode&#36; - This will display the current mode that the server is in, whether it is receiving or distributing.</li>
+			<li>&#36;stime&#36; - Displays a short time string [e.g.; 1:30PM]</li>
+			<li>&#36;ltime&#36; - Displays a long time string [e.g.; 1:30:44 PM]</li>
+			<li>&#36;sdate&#36; - Displays a short date string [e.g.; 25.02.2012]</li>
+		    <li>&#36;ldate&#36; - Displays a long date string [e.g.; Saturday, February 25th, 2012]</li>
+		    <li>&#36;cgen4&#36; - Displays the current Generation IV Pokémon being distributed.</li>
+		    <li>&#36;cgen5&#36; - Displays the current Generation V Pokémon being distributed.</li>
+		    <li>&#36;fgen4&#36; - Displays a generated table showing the Generation IV distribution folder.</li>
+		    <li>&#36;fgen5&#36; - Displays a generated table showing the Generation V distribution folder.</li>
+        </ul>
+		</div>
+		
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+﻿Template Files are pre-defined HTML documents that control
+the browser output of Shiny². It's very easy to design templates
+for Shiny².
+
+1) Create a folder in the template folder and give it a name.
+2) Create two HTML files inside the folder: index.html and table.html
+3) Optionally, you can create an image called preview.png, but that's for later on.
+
+Good job, you have created a template!
+
+Okay, it's prettty simple to figure out what's going where.
+
+In index.html, you put how you want the page to look.
+You also have access to several different macros that
+are built in to Shiny²:
+
+$hg$ - Display the number of sent gen IV pokemon
+$bw$ - Display the number of sent gen V pokemon
+$mode$ - Display the current mode [distribution/receiving]
+$stime$ - Display the current system time [short]
+$ltime$ - Display the current system time [long]
+$sdate$ - Display the current system date [short]
+$ldate$ - Display the current system date [long]
+
+$cgen4$ - current gen 4 file pokemon [only applicable in file mode]
+$cgen5$ - current gen 5 file pokemon [only applicable in file mode]
+
+$fgen4$ - prints a table of gen 4 file pokemon [only applicable in folder mode]
+$fgen5$ - prints a table of gen 5 file pokemon [only applicable in folder mode]
+
+In table.html, the format is extremely simple:
+<tr><td>{0}</td></tr>
+
+The reason {0} is there is that is where the table data will be inserted.
+The data is quite simple: It is just a Pokemon name. 
+You can format the table row however you want.
