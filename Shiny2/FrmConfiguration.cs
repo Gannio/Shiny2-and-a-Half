@@ -4,9 +4,9 @@ using System.Windows.Forms;
 using IniLibrary;
 using Shiny2.Properties;
 using gts;
-//All self changes from original code marked with GANNIO, except for cosmetics to the forms and such cause I don't know how to comment those :\ they are listed below instead.
+//All self changes from original code marked with GANNIO, except for cosmetics to the forms and such, they are listed below instead.
 /*Cosmetic Changes from Shiny2:
-Added Server IP for rerouting away from Nintendo's Server.
+Added AltServer IP for rerouting away from the Original Server.
 Altered DNS Settings page's description to describe above and slightly adjusted description box.
 Added warning at bottom of run page for user to make sure they have a party of 6 (My first experiment resulted in Pokemon with unremovable seals, so I think this necessitates a warning). Hopefully someday someone can find a way to auto-add party details.
 Added credits to top right of run page, as well as suggestion to use responsibly (Please do).
@@ -704,6 +704,11 @@ namespace Shiny2
         }
 
         private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbGtsLog_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

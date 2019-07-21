@@ -39,7 +39,7 @@ namespace gts
         #region variables
 
         private Socket _dnsServer;
-        private Socket _nintendoServer;
+        private Socket _altServer;
         private Thread _readThread;
 
         #endregion
@@ -102,7 +102,7 @@ namespace gts
                 try
                 {
                     _dnsServer = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-                    _nintendoServer = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+                    _altServer = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
                     _dnsServer.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, 1);
                     _dnsServer.Bind(new IPEndPoint(IPAddress.Any, 53));
                     _readThread = new Thread(Spoof);
@@ -202,22 +202,22 @@ namespace gts
                         // Okay, legitimate. Let's keep going
 
                         // Get nintendo's response.
-                        var nintendoReply = new byte[_nintendoServer.ReceiveBufferSize];
+                        var altServerReply = new byte[_altServer.ReceiveBufferSize];
 
                         // GANNIO: Changed, create the connection to the Alternate WFC server for verification process.
-                        _nintendoServer = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp) { ReceiveTimeout = 2000, SendTimeout = 2000 };
-                        _nintendoServer.Connect(OpenDNS, 53);
-                        _nintendoServer.Send(clientRequest, clientRequest.Length, SocketFlags.None);
+                        _altServer = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp) { ReceiveTimeout = 2000, SendTimeout = 2000 };
+                        _altServer.Connect(OpenDNS, 53);
+                        _altServer.Send(clientRequest, clientRequest.Length, SocketFlags.None);
 
                         // reply
-                        var nintendoReceiveLength = _nintendoServer.Receive(nintendoReply, SocketFlags.None);
+                        var altServerReceiveLength = _altServer.Receive(altServerReply, SocketFlags.None);
 
                         // resize
-                        Array.Resize(ref nintendoReply, nintendoReceiveLength);
+                        Array.Resize(ref altServerReply, altServerReceiveLength);
 
                         // check
                         if (rawHost == "gamestats2.gs.nintendowifi.net")
-                            Array.Copy(ipBytes, 0, nintendoReply, 0x3c, 4);
+                            Array.Copy(ipBytes, 0, altServerReply, 0x3c, 4);
 
                         // get the client reply ready
                         // var clientReply = encoding.GetString(nintendoReply);
@@ -226,7 +226,7 @@ namespace gts
                         // WriteLog(string.Format("Sending reply to {0}!", ((IPEndPoint) anyEndPoint).Address));
 
                         // send it off
-                        _dnsServer.SendTo(nintendoReply, anyEndPoint);
+                        _dnsServer.SendTo(altServerReply, anyEndPoint);
                     }
                     else
                     {

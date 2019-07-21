@@ -726,6 +726,7 @@ namespace Shiny2
             this.lbGtsLog.Name = "lbGtsLog";
             this.lbGtsLog.Size = new System.Drawing.Size(349, 164);
             this.lbGtsLog.TabIndex = 0;
+            this.lbGtsLog.SelectedIndexChanged += new System.EventHandler(this.lbGtsLog_SelectedIndexChanged);
             this.lbGtsLog.DoubleClick += new System.EventHandler(this.LbGtsLogDoubleClick);
             // 
             // gbStatistics
