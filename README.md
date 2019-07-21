@@ -14,7 +14,8 @@ Shiny2+1/2 is a slight modification of the Shiny2 source by ShinyJirachi, allowi
 [Link to Shiny2, which made this all possible.](https://archive.codeplex.com/?p=shiny2)
 
 **Original Shiny2 Project Description and Changelog**
-A GTS spoofing system for Pokemon Diamond, Pearl, Platinum, Heart Gold, Soul Silver, Black, White, Black 2, and White 2.
+
+```A GTS spoofing system for Pokemon Diamond, Pearl, Platinum, Heart Gold, Soul Silver, Black, White, Black 2, and White 2.
 
 Visit the thread on ProjectPokemon forums for more information.
 [http://projectpokemon.org/forums/showthread.php?22310-Shiny2-Distribution-System](http://projectpokemon.org/forums/showthread.php?22310-Shiny2-Distribution-System)
@@ -45,4 +46,4 @@ Changelog:
 - Fixed a bug where when doing ordered distribution, the program would throw an IndexOutOfRangeException after the last Pokemon was sent.
 
 1.0
-- Initial Release 
+- Initial Release ```
