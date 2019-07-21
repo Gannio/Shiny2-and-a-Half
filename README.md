@@ -1,11 +1,10 @@
 # Shiny2-and-a-half
 Shiny2 Fork with AltWFC capabilities
 
-Shiny2+1/2 is a slight modification of the Shiny2 source by ShinyJirachi, allowing redirection to alternate servers, allowing use beyond the end of official support.
-
-Changes to the code can be found by searching for 'GANNIO' in comments. Cosmetic changes are briefed in FrmConfiguration.cs.
+Shiny2+1/2 is a slight modification of the Shiny2 source by ShinyJirachi, allowing redirection to alternate servers.
 
 **Shiny 2+1/2 Changelog**
+
 1.5
 - Allow redirection to alternate servers by overwriting original openDNS at runtime.
 - Included a warning at bottom of run screen for users to make sure they have a full party of 6, in case they send a Pokemon without party details.
