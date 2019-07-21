@@ -1,4 +1,4 @@
-# Shiny2-and-a-half
+# Shiny2-and-a-Half
 Shiny2 Fork with AltWFC capabilities
 
 Shiny2+1/2 is a slight modification of the Shiny2 source by ShinyJirachi, allowing redirection to alternate servers.
