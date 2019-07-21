@@ -1,8 +1,10 @@
-Shiny2+1/2 is a slight modification of the Shiny2 source by ShinyJirachi, allowing redirection to alternate servers for an age without Nintendo WFC.
+# Shiny2-and-a-half
+Shiny2 Fork with AltWFC capabilities
 
-Changes to the code can be found by searching for 'GANNIO' in comments. Cosmetic changes are briefed in FrmConfiguration.cs.
+Shiny2+1/2 is a slight modification of the Shiny2 source by ShinyJirachi, allowing redirection to alternate servers.
 
 **Shiny 2+1/2 Changelog**
+
 1.5
 - Allow redirection to alternate servers by overwriting original openDNS at runtime.
 - Included a warning at bottom of run screen for users to make sure they have a full party of 6, in case they send a Pokemon without party details.
@@ -11,8 +13,9 @@ Changes to the code can be found by searching for 'GANNIO' in comments. Cosmetic
 
 [Link to Shiny2, which made this all possible.](https://archive.codeplex.com/?p=shiny2)
 
-**Original Shiny2 Project Description**
-A GTS spoofing system for Pokemon Diamond, Pearl, Platinum, Heart Gold, Soul Silver, Black, White, Black 2, and White 2.
+**Original Shiny2 Project Description and Changelog**
+
+```A GTS spoofing system for Pokemon Diamond, Pearl, Platinum, Heart Gold, Soul Silver, Black, White, Black 2, and White 2.
 
 Visit the thread on ProjectPokemon forums for more information.
 [http://projectpokemon.org/forums/showthread.php?22310-Shiny2-Distribution-System](http://projectpokemon.org/forums/showthread.php?22310-Shiny2-Distribution-System)
@@ -43,4 +46,4 @@ Changelog:
 - Fixed a bug where when doing ordered distribution, the program would throw an IndexOutOfRangeException after the last Pokemon was sent.
 
 1.0
-- Initial Release 
+- Initial Release ```
