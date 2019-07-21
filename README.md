@@ -1,7 +1,7 @@
 # Shiny2-and-a-Half
 Shiny2 Fork with AltWFC capabilities
 
-Shiny2+1/2 is a slight modification of the Shiny2 source by ShinyJirachi, allowing redirection to alternate servers.
+Shiny2+1/2 is a slight modification of the Shiny2 source by ShinyJirachi, allowing redirection to alternate servers for uploading Pokemon data to a PC or sending Pokemon to a DS.
 
 **Shiny 2+1/2 Changelog**
 
