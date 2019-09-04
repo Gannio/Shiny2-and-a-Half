@@ -39,7 +39,22 @@ namespace Shiny2
         {
             return new System.Net.WebClient().DownloadString(Settings.Default.externalIp);
         }
+        
+        private static string GetIPInternal()
+        {
+            var host = System.Net.Dns.GetHostEntry(System.Net.Dns.GetHostName());
+            foreach (var ip in host.AddressList)
+            {
+                if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
+                {
+                    return ip.ToString();
+                }
+            }
+            MessageBox.Show("No network adapters with an IPv4 address found!");
+            return "failure";
+            //throw new Exception("No network adapters with an IPv4 address in the system!");
 
+        }
 /*
         /// <summary>
         /// Converts an Image to a Base64 string.
@@ -272,7 +287,14 @@ namespace Shiny2
         {
             tbIP.Text = GetIP();
         }
-
+        private void btnDetectLocal_Click(object sender, EventArgs e)
+        {
+            string tmp = GetIPInternal();
+            if (tmp != "failure")
+            {
+                tbIP.Text = tmp;
+            }
+        }
         private void CbOperationsSelectedIndexChanged(object sender, EventArgs e)
         {
             switch (cbOperations.SelectedIndex)
@@ -552,11 +574,10 @@ namespace Shiny2
 
             if(cbLog.Checked)
             {
-                _gtsStream.Flush();
-                _dnsStream.Flush();
-
+                //Flushing crashed when checkmarked and was pointless, as closing flushes anyway. -Gannio
                 _gtsStream.Close();
                 _dnsStream.Close();
+
             }
             SaveSettings();
         }
@@ -712,5 +733,7 @@ namespace Shiny2
         {
 
         }
+
+
     }
 }

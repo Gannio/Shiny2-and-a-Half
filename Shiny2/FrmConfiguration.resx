@@ -118,20 +118,20 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="rtbDirections.Text" xml:space="preserve">
-    <value>'Local IP' should be your external IP address unless distributions are going to be done on LAN only. For internal/local use, you can use ipconfig in command line to find your internal IP instead (E.g. Mine was 192.168.77.104, though 77 comes from using a repeater).
+    <value>'Local IP' should be your external IP address if you plan to broadcast your GTS online. Use 'Detect IP (Online)' to find this. For LAN only use, you can use 'Detect IP (LAN)' to get your internal IP instead (E.g. Mine was 192.168.77.104, though 77 comes from using a repeater).
 
 Use 'Local IP' as your Primary DNS in your DS's WFC settings, the program will reroute you to the AltServer IP only for necessary startup connections.
 
 The 'AltServer IP' should be set to the DNS of the alternate server you are using (e.g. KaeruWFC). 
 
-To do these distributions, you [the distributor] must have your ports forwarded. The ports that are necessary to forward are:
+To do these distributions online, you [the distributor] must have your ports forwarded. The ports that are necessary to forward are:
 
 Port 80 [TCP]
 Port 53 [UDP]
 
-If you do not do this, you cannot distribute.
+If you do not do this, you cannot distribute online. You should, however, be able to distribute by LAN.
 
-You can press the "Detect IP" button below the TextBox to attempt to detect your external IP address. This method may not give 100% accuracy, especially if it's using a repeater to connect.</value>
+Note the "Detect IP" button may not give 100% accuracy. Using the command line with ipconfig may be necessary to find the proper address in such a case.</value>
   </data>
   <metadata name="notifyIcon1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

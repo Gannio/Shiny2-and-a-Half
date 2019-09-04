@@ -96,6 +96,7 @@ namespace Shiny2
             this.btnStartDNS = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.btnDetectLocal = new System.Windows.Forms.Button();
             this.vstcSettings.SuspendLayout();
             this.vstpGTS.SuspendLayout();
             this.gbReceive.SuspendLayout();
@@ -387,6 +388,7 @@ namespace Shiny2
             // vstpDNS
             // 
             this.vstpDNS.AutoScroll = true;
+            this.vstpDNS.Controls.Add(this.btnDetectLocal);
             this.vstpDNS.Controls.Add(this.tBAltWFCIP);
             this.vstpDNS.Controls.Add(this.label11);
             this.vstpDNS.Controls.Add(this.btnDnsSave);
@@ -402,7 +404,7 @@ namespace Shiny2
             // 
             // tBAltWFCIP
             // 
-            this.tBAltWFCIP.Location = new System.Drawing.Point(74, 93);
+            this.tBAltWFCIP.Location = new System.Drawing.Point(74, 133);
             this.tBAltWFCIP.Name = "tBAltWFCIP";
             this.tBAltWFCIP.Size = new System.Drawing.Size(88, 20);
             this.tBAltWFCIP.TabIndex = 6;
@@ -412,7 +414,7 @@ namespace Shiny2
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(9, 96);
+            this.label11.Location = new System.Drawing.Point(9, 133);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(66, 13);
             this.label11.TabIndex = 5;
@@ -421,7 +423,7 @@ namespace Shiny2
             // 
             // btnDnsSave
             // 
-            this.btnDnsSave.Location = new System.Drawing.Point(74, 64);
+            this.btnDnsSave.Location = new System.Drawing.Point(74, 104);
             this.btnDnsSave.Name = "btnDnsSave";
             this.btnDnsSave.Size = new System.Drawing.Size(88, 23);
             this.btnDnsSave.TabIndex = 4;
@@ -431,11 +433,11 @@ namespace Shiny2
             // 
             // btnDetect
             // 
-            this.btnDetect.Location = new System.Drawing.Point(74, 35);
+            this.btnDetect.Location = new System.Drawing.Point(12, 64);
             this.btnDetect.Name = "btnDetect";
-            this.btnDetect.Size = new System.Drawing.Size(88, 23);
+            this.btnDetect.Size = new System.Drawing.Size(150, 23);
             this.btnDetect.TabIndex = 3;
-            this.btnDetect.Text = "&Detect IP";
+            this.btnDetect.Text = "&Detect IP (Online)";
             this.btnDetect.UseVisualStyleBackColor = true;
             this.btnDetect.Click += new System.EventHandler(this.BtnDetectClick);
             // 
@@ -797,6 +799,16 @@ namespace Shiny2
             this.notifyIcon1.Text = "Shiny²";
             this.notifyIcon1.DoubleClick += new System.EventHandler(this.notifyIcon1_DoubleClick);
             // 
+            // btnDetectLocal
+            // 
+            this.btnDetectLocal.Location = new System.Drawing.Point(12, 35);
+            this.btnDetectLocal.Name = "btnDetectLocal";
+            this.btnDetectLocal.Size = new System.Drawing.Size(150, 23);
+            this.btnDetectLocal.TabIndex = 7;
+            this.btnDetectLocal.Text = "&Detect IP (LAN)";
+            this.btnDetectLocal.UseVisualStyleBackColor = true;
+            this.btnDetectLocal.Click += new System.EventHandler(this.btnDetectLocal_Click);
+            // 
             // FrmConfiguration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -910,5 +922,6 @@ namespace Shiny2
         private System.Windows.Forms.TextBox tBReceivedStatistics;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btnDetectLocal;
     }
 }

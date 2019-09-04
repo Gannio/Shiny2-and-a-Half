@@ -1361,7 +1361,14 @@ namespace gts
 
                         // pokemon is uploaded; simply reject it.
                         answer = new byte[] {0xc, 0};
-
+                        /* From PKMN Framework: After the above step(s) or performing any of 
+                        * the tasks below other than searching, the game 
+                        * makes a request to /pokemondpds/worldexchange/result.asp.
+                        * If the game has had a Pokémon sent to it via a trade, 
+                        * the server responds with the entire encrypted Pokémon 
+                        * save struct. Otherwise, if there is a Pokémon deposited 
+                        * in the GTS, it responds with 0x0004; if not, it responds 
+                        * with 0x0005. */
                         // Uploading
                         WriteLog(string.Format("{0} is uploading a Pokemon!", ip));
 
