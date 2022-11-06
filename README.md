@@ -11,7 +11,7 @@ Shiny2+1/2 is a slight modification of the Shiny2 source by formlesstree4/ShinyJ
 - Added credits at top right of screen.
 - Other minor adjustments, particularly to UI.
 
-A *huge* thanks to ShinyJirachi, who without [the original Shiny2 this wouldn't have been possible.](https://archive.codeplex.com/?p=shiny2)
+A *huge* thanks to formlesstree4 (ShinyJirachi elsewhere), who without [the original Shiny2 this wouldn't have been possible.](https://github.com/formlesstree4/ShinyGTS)
 
 
 
